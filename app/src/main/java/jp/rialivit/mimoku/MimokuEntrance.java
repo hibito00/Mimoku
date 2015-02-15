@@ -10,30 +10,43 @@ import android.view.View;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MimokuEntrance extends ActionBarActivity {
 
-    private TextView gameStartButton;
+    private TextView MimokuEntranceNextButton;
+    private TextView MimokuEntranceManualButton;
     private Activity myActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mimoku_entrance);
+
         myActivity = this;
-        gameStartButton = (TextView) findViewById(R.id.game_start_button);
-        gameStartButton.setOnClickListener(new View.OnClickListener() {
+
+        MimokuEntranceNextButton = (TextView) findViewById(R.id.mimoku_entrance_button);
+        MimokuEntranceNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(myActivity, MimokuEntrance.class);
+                Intent myIntent = new Intent(myActivity, KatsudonEncounter.class);
+                startActivity(myIntent);
+            }
+        });
+
+        MimokuEntranceManualButton = (TextView) findViewById(R.id.mimoku_entrance_manual_button);
+        MimokuEntranceManualButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(myActivity, MimokuManual.class);
                 startActivity(myIntent);
             }
         });
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_mimoku_entrance, menu);
         return true;
     }
 
@@ -52,4 +65,3 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-

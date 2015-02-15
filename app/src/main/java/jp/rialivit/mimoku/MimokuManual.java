@@ -1,39 +1,24 @@
 package jp.rialivit.mimoku;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
-
-    private TextView gameStartButton;
-    private Activity myActivity;
+public class MimokuManual extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        myActivity = this;
-        gameStartButton = (TextView) findViewById(R.id.game_start_button);
-        gameStartButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(myActivity, MimokuEntrance.class);
-                startActivity(myIntent);
-            }
-        });
+        setContentView(R.layout.activity_mimoku_manual);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_mimoku_manual, menu);
         return true;
     }
 
@@ -52,4 +37,3 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-

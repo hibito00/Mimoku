@@ -16,6 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MimokuEntrance"
+            android:label="@string/title_activity_mimoku_entrance" >
+        </activity>
+        <activity
+            android:name=".MimokuManual"
+            android:label="@string/title_activity_mimoku_manual" >
+        </activity>
+        <activity
+            android:name=".KatsudonEncounter"
+            android:label="@string/title_activity_katsudon_encounter" >
+        </activity>
+        <activity
+            android:name=".KatsudonBattle"
+            android:label="@string/title_activity_katsudon_battle" >
+        </activity>
     </application>
 
 </manifest>

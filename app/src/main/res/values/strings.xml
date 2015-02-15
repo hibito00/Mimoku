@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Mimoku</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Naadon</string>
     <string name="action_settings">Settings</string>
+    <string name="game_start_button">Game Start</string>
+    <string name="title_activity_mimoku_entrance">MimokuEntrance</string>
+    <string name="mimoku_entrance_explanation">ミモクの島と呼ばれる島があった。\nその島では不毛な戦いが繰り返される。</string>
+    <string name="mimoku_entrance_next_button">進む</string>
+    <string name="mimoku_entrance_manual_button">操作説明</string>
+    <string name="title_activity_katsudon_encounter">KatsudonEncounter</string>
+    <string name="title_activity_manual">Manual</string>
+    <string name="katsudon_encounter_explanation">カツドンと戦うことになった。\nカツドンはとにかく勝ちたがるので\n勝たせるな！\n引き分けてもいい！！</string>
+    <string name="katsudon_encounter_next_button">戦う</string>
+    <string name="title_activity_katsudon_battle">KatsudonBattle</string>
+    <string name="title_activity_mimoku_manual">Hello world!</string>
 
 </resources>

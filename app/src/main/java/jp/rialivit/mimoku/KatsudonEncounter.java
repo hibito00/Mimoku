@@ -10,30 +10,34 @@ import android.view.View;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class KatsudonEncounter extends ActionBarActivity {
 
-    private TextView gameStartButton;
+    private View katsudonEntranceNextButton;
     private Activity myActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_katsudon_encounter);
+
         myActivity = this;
-        gameStartButton = (TextView) findViewById(R.id.game_start_button);
-        gameStartButton.setOnClickListener(new View.OnClickListener() {
+
+        katsudonEntranceNextButton = (TextView) findViewById(R.id.katsudon_encounter_next_button);
+        katsudonEntranceNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(myActivity, MimokuEntrance.class);
+                Intent myIntent = new Intent(myActivity, KatsudonBattle.class);
                 startActivity(myIntent);
             }
         });
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_katsudon_encounter, menu);
         return true;
     }
 
@@ -52,4 +56,3 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-
